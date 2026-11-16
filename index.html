@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ff9a9e">
   <title>Nuestra Historia ❤️</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Fuente elegante desde Google Fonts -->
@@ -55,59 +56,59 @@
     </div>
   </section>
 
-<!-- Carrusel 1: Viajes y Rutas -->
-<section class="container">
-  <h2>Viajes y Rutas</h2>
-  <div class="carousel-container" id="carousel-viajes">
-    <div class="carousel-track">
-      <div class="carousel-slide"><img src="fotos/viaje1.jpg" alt="Viaje 1"></div>
-      <div class="carousel-slide"><img src="fotos/viaje2.jpg" alt="Viaje 2"></div>
-      <div class="carousel-slide"><img src="fotos/viaje3.jpg" alt="Viaje 3"></div>
-      <div class="carousel-slide"><img src="fotos/viaje4.jpg" alt="Viaje 4"></div>
-      <div class="carousel-slide"><img src="fotos/viaje5.jpg" alt="Viaje 5"></div>
-      <div class="carousel-slide"><img src="fotos/viaje6.jpg" alt="Viaje 6"></div>
-      <!-- Copia invisible de la primera para el bucle suave -->
-      <div class="carousel-slide"><img src="fotos/viaje1.jpg" alt="Viaje 1 copia"></div>
+  <!-- Carrusel 1: Viajes y Rutas -->
+  <section class="container">
+    <h2>Viajes y Rutas</h2>
+    <div class="carousel-container" id="carousel-viajes">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="fotos/viaje1.jpg" alt="Viaje 1"></div>
+        <div class="carousel-slide"><img src="fotos/viaje2.jpg" alt="Viaje 2"></div>
+        <div class="carousel-slide"><img src="fotos/viaje3.jpg" alt="Viaje 3"></div>
+        <div class="carousel-slide"><img src="fotos/viaje4.jpg" alt="Viaje 4"></div>
+        <div class="carousel-slide"><img src="fotos/viaje5.jpg" alt="Viaje 5"></div>
+        <div class="carousel-slide"><img src="fotos/viaje6.jpg" alt="Viaje 6"></div>
+        <!-- Copia invisible de la primera para el bucle suave -->
+        <div class="carousel-slide"><img src="fotos/viaje1.jpg" alt="Viaje 1 copia"></div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-viajes', -1)">❮</button>
+      <button class="carousel-btn next-btn" onclick="moveSlide('carousel-viajes', 1)">❯</button>
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide('carousel-viajes', 0)"></span>
+        <span class="dot" onclick="currentSlide('carousel-viajes', 1)"></span>
+        <span class="dot" onclick="currentSlide('carousel-viajes', 2)"></span>
+        <span class="dot" onclick="currentSlide('carousel-viajes', 3)"></span>
+        <span class="dot" onclick="currentSlide('carousel-viajes', 4)"></span>
+        <span class="dot" onclick="currentSlide('carousel-viajes', 5)"></span>
+      </div>
     </div>
-    <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-viajes', -1)">❮</button>
-    <button class="carousel-btn next-btn" onclick="moveSlide('carousel-viajes', 1)">❯</button>
-    <div class="carousel-dots">
-      <span class="dot active" onclick="currentSlide('carousel-viajes', 0)"></span>
-      <span class="dot" onclick="currentSlide('carousel-viajes', 1)"></span>
-      <span class="dot" onclick="currentSlide('carousel-viajes', 2)"></span>
-      <span class="dot" onclick="currentSlide('carousel-viajes', 3)"></span>
-      <span class="dot" onclick="currentSlide('carousel-viajes', 4)"></span>
-      <span class="dot" onclick="currentSlide('carousel-viajes', 5)"></span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Carrusel 2: Siempre Juntos -->
-<section class="container">
-  <h2>Siempre Juntos</h2>
-  <div class="carousel-container" id="carousel-juntos">
-    <div class="carousel-track">
-      <div class="carousel-slide"><img src="fotos/juntos1.jpg" alt="Juntos 1"></div>
-      <div class="carousel-slide"><img src="fotos/juntos2.jpg" alt="Juntos 2"></div>
-      <div class="carousel-slide"><img src="fotos/juntos3.jpg" alt="Juntos 3"></div>
-      <div class="carousel-slide"><img src="fotos/juntos4.jpg" alt="Juntos 4"></div>
-      <div class="carousel-slide"><img src="fotos/juntos5.jpg" alt="Juntos 5"></div>
-      <div class="carousel-slide"><img src="fotos/juntos6.jpg" alt="Juntos 6"></div>
-      <!-- Copia invisible de la primera para el bucle suave -->
-      <div class="carousel-slide"><img src="fotos/juntos1.jpg" alt="Juntos 1 copia"></div>
+  <!-- Carrusel 2: Siempre Juntos -->
+  <section class="container">
+    <h2>Siempre Juntos</h2>
+    <div class="carousel-container" id="carousel-juntos">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="fotos/juntos1.jpg" alt="Juntos 1"></div>
+        <div class="carousel-slide"><img src="fotos/juntos2.jpg" alt="Juntos 2"></div>
+        <div class="carousel-slide"><img src="fotos/juntos3.jpg" alt="Juntos 3"></div>
+        <div class="carousel-slide"><img src="fotos/juntos4.jpg" alt="Juntos 4"></div>
+        <div class="carousel-slide"><img src="fotos/juntos5.jpg" alt="Juntos 5"></div>
+        <div class="carousel-slide"><img src="fotos/juntos6.jpg" alt="Juntos 6"></div>
+        <!-- Copia invisible de la primera para el bucle suave -->
+        <div class="carousel-slide"><img src="fotos/juntos1.jpg" alt="Juntos 1 copia"></div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-juntos', -1)">❮</button>
+      <button class="carousel-btn next-btn" onclick="moveSlide('carousel-juntos', 1)">❯</button>
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide('carousel-juntos', 0)"></span>
+        <span class="dot" onclick="currentSlide('carousel-juntos', 1)"></span>
+        <span class="dot" onclick="currentSlide('carousel-juntos', 2)"></span>
+        <span class="dot" onclick="currentSlide('carousel-juntos', 3)"></span>
+        <span class="dot" onclick="currentSlide('carousel-juntos', 4)"></span>
+        <span class="dot" onclick="currentSlide('carousel-juntos', 5)"></span>
+      </div>
     </div>
-    <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-juntos', -1)">❮</button>
-    <button class="carousel-btn next-btn" onclick="moveSlide('carousel-juntos', 1)">❯</button>
-    <div class="carousel-dots">
-      <span class="dot active" onclick="currentSlide('carousel-juntos', 0)"></span>
-      <span class="dot" onclick="currentSlide('carousel-juntos', 1)"></span>
-      <span class="dot" onclick="currentSlide('carousel-juntos', 2)"></span>
-      <span class="dot" onclick="currentSlide('carousel-juntos', 3)"></span>
-      <span class="dot" onclick="currentSlide('carousel-juntos', 4)"></span>
-      <span class="dot" onclick="currentSlide('carousel-juntos', 5)"></span>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contador de tiempo -->
   <section class="container counter-section">
@@ -133,32 +134,32 @@
     </div>
   </section>
 
-<!-- Carrusel 3: Nuestro Lugar Favorito (Ojo, este tiene 5 fotos originales + 1 copia = 6 slides totales) -->
-<section class="container">
-  <h2>Nuestro Lugar Favorito</h2>
-  <div class="carousel-container" id="carousel-lugar">
-    <div class="carousel-track">
-      <div class="carousel-slide"><img src="fotos/lugar1.jpg" alt="Lugar 1"></div>
-      <div class="carousel-slide"><img src="fotos/lugar2.jpg" alt="Lugar 2"></div>
-      <div class="carousel-slide"><img src="fotos/lugar3.jpg" alt="Lugar 3"></div>
-      <div class="carousel-slide"><img src="fotos/lugar4.jpg" alt="Lugar 4"></div>
-      <div class="carousel-slide"><img src="fotos/lugar5.jpg" alt="Lugar 5"></div>
-      <!-- Copia invisible de la primera para el bucle suave -->
-      <div class="carousel-slide"><img src="fotos/lugar1.jpg" alt="Lugar 1 copia"></div>
+  <!-- Carrusel 3: Nuestro Lugar Favorito (5 fotos originales + 1 copia = 6 slides totales) -->
+  <section class="container">
+    <h2>Nuestro Lugar Favorito</h2>
+    <div class="carousel-container" id="carousel-lugar">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="fotos/lugar1.jpg" alt="Lugar 1"></div>
+        <div class="carousel-slide"><img src="fotos/lugar2.jpg" alt="Lugar 2"></div>
+        <div class="carousel-slide"><img src="fotos/lugar3.jpg" alt="Lugar 3"></div>
+        <div class="carousel-slide"><img src="fotos/lugar4.jpg" alt="Lugar 4"></div>
+        <div class="carousel-slide"><img src="fotos/lugar5.jpg" alt="Lugar 5"></div>
+        <!-- Copia invisible de la primera para el bucle suave -->
+        <div class="carousel-slide"><img src="fotos/lugar1.jpg" alt="Lugar 1 copia"></div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-lugar', -1)">❮</button>
+      <button class="carousel-btn next-btn" onclick="moveSlide('carousel-lugar', 1)">❯</button>
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide('carousel-lugar', 0)"></span>
+        <span class="dot" onclick="currentSlide('carousel-lugar', 1)"></span>
+        <span class="dot" onclick="currentSlide('carousel-lugar', 2)"></span>
+        <span class="dot" onclick="currentSlide('carousel-lugar', 3)"></span>
+        <span class="dot" onclick="currentSlide('carousel-lugar', 4)"></span>
+      </div>
     </div>
-    <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-lugar', -1)">❮</button>
-    <button class="carousel-btn next-btn" onclick="moveSlide('carousel-lugar', 1)">❯</button>
-    <div class="carousel-dots">
-      <span class="dot active" onclick="currentSlide('carousel-lugar', 0)"></span>
-      <span class="dot" onclick="currentSlide('carousel-lugar', 1)"></span>
-      <span class="dot" onclick="currentSlide('carousel-lugar', 2)"></span>
-      <span class="dot" onclick="currentSlide('carousel-lugar', 3)"></span>
-      <span class="dot" onclick="currentSlide('carousel-lugar', 4)"></span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Próximos Destinos (Lista de Deseos) -->
+  <!-- Próximos Destinos (Lista de Deseos) -->
   <section class="container bucket-section">
     <h2>Nuestros Próximos Destinos</h2>
     <div class="bucket-card">
@@ -178,7 +179,7 @@
     </div>
   </section>
 
-<!-- Minijuego de Amor para Gema -->
+  <!-- Minijuego de Amor para Gema -->
   <section class="container quiz-section">
     <h2>Minijuego 🎮❤️</h2>
     <div class="quiz-card">
@@ -224,7 +225,7 @@
 
           <!-- Pregunta 5 -->
           <div class="quiz-question">
-            <p><strong>5. ¿Cual es mi coche favorito?</strong></p>
+            <p><strong>5. ¿Cual es mi coche favorito que quiera tener?</strong></p>
             <label><input type="radio" name="q5" value="correct"> A) Audi RS3</label>
             <label><input type="radio" name="q5" value="b"> B) Audi R8</label>
             <label><input type="radio" name="q5" value="c"> C) Porsche 911</label>
@@ -254,7 +255,6 @@
             <label><input type="radio" name="q8" value="c"> C) Balonmano</label>
           </div>
 
-          <!-- Pregunta 9 -->
           <!-- Pregunta 9 -->
           <div class="quiz-question">
             <p><strong>9. ¿Cuáles quiero que sean mis colores de coche? (Elige 2)</strong></p>

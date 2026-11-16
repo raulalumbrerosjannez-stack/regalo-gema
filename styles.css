@@ -200,13 +200,16 @@ footer {
   color: #aaa;
 }
 
-/* Pantalla de bienvenida (Intro) */
+/* Pantalla de bienvenida (Intro) optimizada para iPhone */
 #intro-screen {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
   z-index: 9999;
   display: flex;
