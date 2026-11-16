@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Historia ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fuente elegante desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida con corazón interactivo -->
+  <div id="intro-screen">
+    <div class="intro-content">
+      <h2 class="intro-title">Una sorpresa para Gim</h2>
+      <p class="intro-subtitle">Haz clic en el corazón para abrir</p>
+      
+      <div class="heart-container" onclick="openGift()">
+        <svg class="heart-svg" viewBox="0 0 32 32">
+          <path class="heart-bg" d="M16 28.5 C16 28.5 3 20.5 3 11.5 C3 6.5 7 3.5 11.5 3.5 C14.3 3.5 16 5 16 5 C16 5 17.7 3.5 20.5 3.5 C25 3.5 29 6.5 29 11.5 C29 20.5 16 28.5 16 28.5 Z" />
+          <path class="heart-fill" d="M16 28.5 C16 28.5 3 20.5 3 11.5 C3 6.5 7 3.5 11.5 3.5 C14.3 3.5 16 5 16 5 C16 5 17.7 3.5 20.5 3.5 C25 3.5 29 6.5 29 11.5 C29 20.5 16 28.5 16 28.5 Z" />
+        </svg>
+      </div>
+      
+      <span class="click-hint">Toca el corazón ❤️</span>
+    </div>
+  </div>
+
+  <!-- Audio oculto de la música -->
+  <audio id="bg-music" loop>
+    <source src="audio/musica.mp4" type="audio/mp4">
+  </audio>
+
+  <!-- Portada / Cabecera -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="script-title">Nuestra Historia</h1>
+      <p class="subtitle">Para la persona más especial del mundo</p>
+      <div class="heart-pulse">❤️</div>
+    </div>
+  </header>
+
+  <!-- Reproductor de Nuestra Canción -->
+  <section class="container">
+    <div class="music-card">
+      <div class="music-info">
+        <img src="fotos/Melendi.png" alt="Melendi" class="disc-img">
+        <div>
+          <h3>Nuestra Canción</h3>
+          <p class="song-title">Calle la Pantomima - Melendi</p>
+        </div>
+      </div>
+      <button id="custom-play-btn" onclick="toggleMusic()">▶️ Reproducir</button>
+    </div>
+  </section>
+
+<!-- Carrusel 1: Viajes y Rutas -->
+<section class="container">
+  <h2>Viajes y Rutas</h2>
+  <div class="carousel-container" id="carousel-viajes">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="fotos/viaje1.jpg" alt="Viaje 1"></div>
+      <div class="carousel-slide"><img src="fotos/viaje2.jpg" alt="Viaje 2"></div>
+      <div class="carousel-slide"><img src="fotos/viaje3.jpg" alt="Viaje 3"></div>
+      <div class="carousel-slide"><img src="fotos/viaje4.jpg" alt="Viaje 4"></div>
+      <div class="carousel-slide"><img src="fotos/viaje5.jpg" alt="Viaje 5"></div>
+      <div class="carousel-slide"><img src="fotos/viaje6.jpg" alt="Viaje 6"></div>
+      <!-- Copia invisible de la primera para el bucle suave -->
+      <div class="carousel-slide"><img src="fotos/viaje1.jpg" alt="Viaje 1 copia"></div>
+    </div>
+    <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-viajes', -1)">❮</button>
+    <button class="carousel-btn next-btn" onclick="moveSlide('carousel-viajes', 1)">❯</button>
+    <div class="carousel-dots">
+      <span class="dot active" onclick="currentSlide('carousel-viajes', 0)"></span>
+      <span class="dot" onclick="currentSlide('carousel-viajes', 1)"></span>
+      <span class="dot" onclick="currentSlide('carousel-viajes', 2)"></span>
+      <span class="dot" onclick="currentSlide('carousel-viajes', 3)"></span>
+      <span class="dot" onclick="currentSlide('carousel-viajes', 4)"></span>
+      <span class="dot" onclick="currentSlide('carousel-viajes', 5)"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Carrusel 2: Siempre Juntos -->
+<section class="container">
+  <h2>Siempre Juntos</h2>
+  <div class="carousel-container" id="carousel-juntos">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="fotos/juntos1.jpg" alt="Juntos 1"></div>
+      <div class="carousel-slide"><img src="fotos/juntos2.jpg" alt="Juntos 2"></div>
+      <div class="carousel-slide"><img src="fotos/juntos3.jpg" alt="Juntos 3"></div>
+      <div class="carousel-slide"><img src="fotos/juntos4.jpg" alt="Juntos 4"></div>
+      <div class="carousel-slide"><img src="fotos/juntos5.jpg" alt="Juntos 5"></div>
+      <div class="carousel-slide"><img src="fotos/juntos6.jpg" alt="Juntos 6"></div>
+      <!-- Copia invisible de la primera para el bucle suave -->
+      <div class="carousel-slide"><img src="fotos/juntos1.jpg" alt="Juntos 1 copia"></div>
+    </div>
+    <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-juntos', -1)">❮</button>
+    <button class="carousel-btn next-btn" onclick="moveSlide('carousel-juntos', 1)">❯</button>
+    <div class="carousel-dots">
+      <span class="dot active" onclick="currentSlide('carousel-juntos', 0)"></span>
+      <span class="dot" onclick="currentSlide('carousel-juntos', 1)"></span>
+      <span class="dot" onclick="currentSlide('carousel-juntos', 2)"></span>
+      <span class="dot" onclick="currentSlide('carousel-juntos', 3)"></span>
+      <span class="dot" onclick="currentSlide('carousel-juntos', 4)"></span>
+      <span class="dot" onclick="currentSlide('carousel-juntos', 5)"></span>
+    </div>
+  </div>
+</section>
+
+  <!-- Contador de tiempo -->
+  <section class="container counter-section">
+    <h2>Llevamos juntos...</h2>
+    <div id="timer">
+      <div class="time-box"><span id="days">0</span><small>Días</small></div>
+      <div class="time-box"><span id="hours">0</span><small>Horas</small></div>
+      <div class="time-box"><span id="minutes">0</span><small>Min</small></div>
+      <div class="time-box"><span id="seconds">0</span><small>Seg</small></div>
+    </div>
+  </section>
+
+  <!-- Carta / Mensaje final -->
+  <section class="container letter-section">
+    <h2>Una carta para ti</h2>
+    <div class="letter">
+      <p>Hola mi amor:</p>
+      <p>Si estás leyendo esto es porque quería tener un detallito contigo y decirte lo mucho que te quiero. Ya sabes que no se me da muy bien esto de escribir cartas y expresar estas cosas, pero bueno... ¡se intenta!.</p>
+      <p>Quiero darte las gracias de corazón por este año y pico tan bonito a tu lado. Miro atrás y me doy cuenta de la suerte que tengo: cada viaje, cada ruta, cada cena y cada momento juntos se han quedado grabados para siempre. Esto es solo el principio de todo lo que nos queda por compartir. Gracias por hacer mi vida más bonita día a día.</p>
+      <p>Gracias también por apoyarme en todo y por tener que aguantarme en todo momento (que sé que a veces no es fácil). Gracias por estar siempre ahí. Te quiero muchísimo.</p>
+      <p>No sé que nos deparará el futuro, pero sí sé una cosa: quiero seguir creando recuerdos junto a ti y que no se acabe nunca.</p>
+      <p class="signature">Con todo mi amor,<br><strong>Raaaa</strong></p>
+    </div>
+  </section>
+
+<!-- Carrusel 3: Nuestro Lugar Favorito (Ojo, este tiene 5 fotos originales + 1 copia = 6 slides totales) -->
+<section class="container">
+  <h2>Nuestro Lugar Favorito</h2>
+  <div class="carousel-container" id="carousel-lugar">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="fotos/lugar1.jpg" alt="Lugar 1"></div>
+      <div class="carousel-slide"><img src="fotos/lugar2.jpg" alt="Lugar 2"></div>
+      <div class="carousel-slide"><img src="fotos/lugar3.jpg" alt="Lugar 3"></div>
+      <div class="carousel-slide"><img src="fotos/lugar4.jpg" alt="Lugar 4"></div>
+      <div class="carousel-slide"><img src="fotos/lugar5.jpg" alt="Lugar 5"></div>
+      <!-- Copia invisible de la primera para el bucle suave -->
+      <div class="carousel-slide"><img src="fotos/lugar1.jpg" alt="Lugar 1 copia"></div>
+    </div>
+    <button class="carousel-btn prev-btn" onclick="moveSlide('carousel-lugar', -1)">❮</button>
+    <button class="carousel-btn next-btn" onclick="moveSlide('carousel-lugar', 1)">❯</button>
+    <div class="carousel-dots">
+      <span class="dot active" onclick="currentSlide('carousel-lugar', 0)"></span>
+      <span class="dot" onclick="currentSlide('carousel-lugar', 1)"></span>
+      <span class="dot" onclick="currentSlide('carousel-lugar', 2)"></span>
+      <span class="dot" onclick="currentSlide('carousel-lugar', 3)"></span>
+      <span class="dot" onclick="currentSlide('carousel-lugar', 4)"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Próximos Destinos (Lista de Deseos) -->
+  <section class="container bucket-section">
+    <h2>Nuestros Próximos Destinos</h2>
+    <div class="bucket-card">
+      <p class="bucket-intro">Cosas que nos quedan por hacer y lugares que descubrir juntos...</p>
+      
+      <button class="bucket-btn" onclick="toggleBucketList()">✈️ Pulsa aquí para ver nuestros próximos destinos</button>
+
+      <!-- Lista oculta que se despliega al pulsar -->
+      <div id="bucket-list-content" class="bucket-content hidden">
+        <ul class="bucket-list">
+          <li>🧸 <strong>Destino 1:</strong> (Londres (18-12-2026)-(22-12-2026))</li>
+          <li>✈️ <strong>Destino 2:</strong> (Grecia (06-03-2027)-(08-03-2027))</li>
+          <li>🏔️ <strong>Destino 3:</strong> (Asturias (??-??-????)-(??-??-????))</li>
+          <li>⭐ <strong>Destino 4:</strong> (Austria (??-??-????)-(??-??-????))</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<!-- Minijuego de Amor para Gema -->
+  <section class="container quiz-section">
+    <h2>Minijuego 🎮❤️</h2>
+    <div class="quiz-card">
+      <p class="quiz-intro">¿Tan bien me conoces? Pon a prueba tu memoria.</p>
+      
+      <button type="button" class="quiz-toggle-btn" onclick="toggleQuizGame()">🎮 Entrar al Minijuego</button>
+
+      <!-- Bloque del juego que está oculto hasta pulsar el botón -->
+      <div id="quiz-game-content" class="quiz-content hidden">
+        <form id="love-quiz-form">
+          
+          <!-- Pregunta 1 -->
+          <div class="quiz-question">
+            <p><strong>1. ¿Cuál es mi marca de coche favorita?</strong></p>
+            <label><input type="radio" name="q1" value="a"> A) Porsche</label>
+            <label><input type="radio" name="q1" value="correct"> B) Audi</label>
+            <label><input type="radio" name="q1" value="c"> C) BMW</label>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="quiz-question">
+            <p><strong>2. ¿Cual es mi coche?</strong></p>
+            <label><input type="radio" name="q2" value="correct"> A) SKODA Fabia</label>
+            <label><input type="radio" name="q2" value="b"> B) La Raneta</label>
+            <label><input type="radio" name="q2" value="c"> C) SKODA Octavia</label>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="quiz-question">
+            <p><strong>3. ¿Que me gusta más?</strong></p>
+            <label><input type="radio" name="q3" value="a"> A) Las KDD</label>
+            <label><input type="radio" name="q3" value="correct"> B) Ir a Vallecas (estadio)</label>
+            <label><input type="radio" name="q3" value="c"> C) Mirar relojes</label>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="quiz-question">
+            <p><strong>4. ¿De que marca es el proximo reloj que quiero?</strong></p>
+            <label><input type="radio" name="q4" value="correct"> A) Casio</label>
+            <label><input type="radio" name="q4" value="b"> B) Tissot</label>
+            <label><input type="radio" name="q4" value="c"> C) Festina</label>
+          </div>
+
+          <!-- Pregunta 5 -->
+          <div class="quiz-question">
+            <p><strong>5. ¿Cual es mi coche favorito?</strong></p>
+            <label><input type="radio" name="q5" value="correct"> A) Audi RS3</label>
+            <label><input type="radio" name="q5" value="b"> B) Audi R8</label>
+            <label><input type="radio" name="q5" value="c"> C) Porsche 911</label>
+          </div>
+
+          <!-- Pregunta 6 -->
+          <div class="quiz-question">
+            <p><strong>6. ¿Quien suele ganar en nuestras batallas de la champions burguer?</strong></p>
+            <label><input type="radio" name="q6" value="a"> A) Gim</label>
+            <label><input type="radio" name="q6" value="b"> B) Suele estar empatado</label>
+            <label><input type="radio" name="q6" value="correct"> C) Raaaa</label>
+          </div>
+
+          <!-- Pregunta 7 -->
+          <div class="quiz-question">
+            <p><strong>7. ¿Cual es mi marca de ropa favorita?</strong></p>
+            <label><input type="radio" name="q7" value="correct"> A) Lacoste</label>
+            <label><input type="radio" name="q7" value="b"> B) The North Face</label>
+            <label><input type="radio" name="q7" value="c"> C) Salomon</label>
+          </div>
+
+          <!-- Pregunta 8 -->
+          <div class="quiz-question">
+            <p><strong>8. ¿Que deporte NO he echo?</strong></p>
+            <label><input type="radio" name="q8" value="correct"> A) Baloncesto</label>
+            <label><input type="radio" name="q8" value="b"> B) Tenis</label>
+            <label><input type="radio" name="q8" value="c"> C) Balonmano</label>
+          </div>
+
+          <!-- Pregunta 9 -->
+          <!-- Pregunta 9 -->
+          <div class="quiz-question">
+            <p><strong>9. ¿Cuáles quiero que sean mis colores de coche? (Elige 2)</strong></p>
+            <label><input type="checkbox" name="q9" value="correct1"> A) Morado</label>
+            <label><input type="checkbox" name="q9" value="b"> B) Negro</label>
+            <label><input type="checkbox" name="q9" value="c"> C) Rojo</label>
+            <label><input type="checkbox" name="q9" value="correct2"> D) Verde</label>
+            <label><input type="checkbox" name="q9" value="e"> E) Blanco</label>
+          </div>
+
+          <!-- Pregunta 10 -->
+          <div class="quiz-question">
+            <p><strong>10. ¿Donde fue la ultima champions burguer que fuimos?</strong></p>
+            <label><input type="radio" name="q10" value="b"> A) Leganes</label>
+            <label><input type="radio" name="q10" value="c"> B) La gavia</label>
+            <label><input type="radio" name="q10" value="correct"> C) Plenilunio</label>
+          </div>
+
+          <button type="button" class="quiz-submit-btn" onclick="calculateQuizScore()">✨ Ver mi nota</button>
+        </form>
+
+        <!-- Resultado final -->
+        <div id="quiz-result" class="quiz-result hidden">
+          <h3>Tu nota final es: <span id="score-number">0</span> / 10</h3>
+          <p id="score-message"></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho con ❤️ solo para ti</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
